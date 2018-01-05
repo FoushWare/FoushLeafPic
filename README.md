@@ -12,9 +12,9 @@
 * You can see that in MainActivity 
 ~~~~
   @Override
-    public void onConfigurationChanged(Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        if (newConfig.orientation != Configuration.ORIENTATION_LANDSCAPE) {
+public void onConfigurationChanged(Configuration newConfig) {
+     super.onConfigurationChanged(newConfig);
+    if (newConfig.orientation != Configuration.ORIENTATION_LANDSCAPE) {
             fab.setVisibility(View.VISIBLE);
             fab.animate().translationY(fab.getHeight() * 2).start();
         } else
@@ -25,10 +25,27 @@
 
 
    [more reading ...](http://code.hootsuite.com/orientation-changes-on-android/)             
-* `Actions ...`
+* `Actions /Main...`
     *             android.intent.action.MAIN"
  Description
 * means that this activity is the entry point of the application, i.e. when you launch the application, this activity is created.
+* `Actions /GET_CONTENT...`
+
+    * Code
+~~~~
+     <intent-filter android:label="@string/app_name">
+             <action android:name="android.intent.action.GET_CONTENT" />
+                <data android:mimeType="image/*" />
+                <data android:mimeType="video/*" />
+     </intent-filter>
+ ~~~~
+ Description
+* Just as your application can send data to other applications, so too can it easily receive data from applications , and `data tage` specify the type of data to get from other applications
+
+
+   [more reading ...](https://developer.android.com/training/sharing/receive.html)
+
+* `Category ...` 
 
     *             android:name="android.intent.category.DEFAULT"
  Description
@@ -36,6 +53,9 @@
 
 
    [more reading ...](https://stackoverflow.com/questions/6782820/what-does-category-in-the-manifest-mean)
+   
+   
+ 
 
 
 
