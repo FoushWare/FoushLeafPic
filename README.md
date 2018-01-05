@@ -25,7 +25,17 @@
 
 
    [more reading ...](http://code.hootsuite.com/orientation-changes-on-android/)             
+* `Actions ...`
+    *             android.intent.action.MAIN"
+ Description
+* means that this activity is the entry point of the application, i.e. when you launch the application, this activity is created.
 
+    *             android:name="android.intent.category.DEFAULT"
+ Description
+* This is related to the Android operating system The os assign some Categories so every application know them ,this is useful if we running for example :launcher and the launcher want to show the apps for Google and list them in group ,it will start searching in all app's Manifest for category called Google then list them
+
+
+   [more reading ...](https://stackoverflow.com/questions/6782820/what-does-category-in-the-manifest-mean)
 
 
 
