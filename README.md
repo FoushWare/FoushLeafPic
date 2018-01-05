@@ -42,6 +42,26 @@ public void onConfigurationChanged(Configuration newConfig) {
  Description
 * Just as your application can send data to other applications, so too can it easily receive data from applications , and `data tage` specify the type of data to get from other applications
 
+### Usage in code Java
+
+~~~~~
+pickMode = getIntent().getAction().equals(Intent.ACTION_GET_CONTENT) || getIntent().getAction().equals(Intent.ACTION_PICK);
+
+Intent intent = new Intent(SplashScreen.this, MainActivity.class);
+
+  if (pickMode) {
+            intent.putExtra(SplashScreen.PICK_MODE, pickMode);
+            startActivityForResult(intent, PICK_MEDIA_REQUEST);
+    } else {
+            startActivity(intent);
+            finish();
+        }
+~~~~~
+
+
+
+
+
 
    [more reading ...](https://developer.android.com/training/sharing/receive.html)
 
@@ -53,6 +73,22 @@ public void onConfigurationChanged(Configuration newConfig) {
 
 
    [more reading ...](https://stackoverflow.com/questions/6782820/what-does-category-in-the-manifest-mean)
+   
+## `APP UI`
+* The app uses 
+    *  ` CardView with RecyclerView` 
+        * i've made implementation of this Here [FoushCardView](https://github.com/AhmedFouad60/FoushCardView)
+        * [Tutorial](https://www.learn2crack.com/2016/02/android-recyclerview-and-cardview.html)
+
+
+
+
+
+
+
+
+
+
    
    
  
